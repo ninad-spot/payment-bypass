@@ -1,0 +1,12 @@
+{
+  "name": "payment-bypass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
