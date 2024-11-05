@@ -15,12 +15,12 @@ const filePath = path.resolve(__dirname, 'paymentStatus.txt');
 
 app.post('/payment/check-status', async (req, res) => {
     const  { amount } = req.body
-    let data;
-    while (true) {
-        data = await readFile(filePath, 'utf8');
-        if (data === 'success') break;
-        await delay(1000);
-    }
+    // let data;
+    // while (true) {
+    //     data = await readFile(filePath, 'utf8');
+    //     if (data === 'success') break;
+    //     await delay(1000);
+    // }
     const updatedContent = 'pending';
     await writeFile(filePath, updatedContent, 'utf8');
     return res.json({ message: "Payment Successful" })
